@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NavSkills - Plataforma de Cursos</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f3c7ff, #fab3e0);
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      color: #6c2bd9;
+    }
+    .nav-link {
+      color: #333;
+      font-weight: 500;
+    }
+    .btn-signin {
+      background: #ff66c4;
+      color: #fff;
+      border-radius: 50px;
+      padding: 6px 20px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0;
+      background: #fff;
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+    .hero h1 {
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+    .hero p {
+      color: #555;
+    }
+    .btn-main {
+      background: #6c2bd9;
+      color: #fff;
+      border-radius: 30px;
+      padding: 10px 25px;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+    .btn-main:hover {
+      background: #8744ff;
+    }
+    .btn-outline-main {
+      border: 2px solid #6c2bd9;
+      color: #6c2bd9;
+      border-radius: 30px;
+      padding: 10px 25px;
+      transition: 0.3s;
+    }
+    .btn-outline-main:hover {
+      background: #6c2bd9;
+      color: #fff;
+    }
+
+    /* Search Section */
+    .search-section {
+      background: #fff;
+      padding: 40px 20px;
+      border-radius: 20px;
+      margin-top: 50px;
+    }
+
+    /* Courses */
+    .courses {
+      margin-top: 80px;
+    }
+    .course-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+    .course-card img {
+      border-radius: 20px 20px 0 0;
+    }
+    .price {
+      color: #6c2bd9;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      border-radius: 20px;
+      margin-top: 80px;
+      padding: 40px;
+    }
+
+    /* Voltar ao topo */
+    #btnTop {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #6c2bd9;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 999;
+      transition: 0.3s;
+    }
+    #btnTop:hover {
+      background-color: #8744ff;
+      transform: translateY(-3px);
+    }
+
+    h2, h3, h5 {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">NavSkills</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Estágios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cursos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Portfólio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+        </ul>
+        <a href="#" class="btn btn-signin ms-lg-3">Entrar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center text-lg-start" data-aos="fade-up">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
+      <div class="hero-text col-lg-6" data-aos="fade-right">
+        <h1>Desbloqueie seu Potencial com a <span style="color:#6c2bd9;">NavSkills</span>!</h1>
+        <p>Explore, aprenda e cresça conosco! Cursos criados por especialistas para transformar seu conhecimento em resultados.</p>
+        <button class="btn btn-main">Obter Proposta</button>
+        <button class="btn btn-outline-main">Testar Agora</button>
+      </div>
+      <div class="hero-image col-lg-5 mt-4 mt-lg-0 text-center" data-aos="fade-left">
+        <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295401_1280.png" alt="Estudante" class="img-fluid" width="300">
+      </div>
+    </div>
+  </section>
+
+  <!-- Search Section -->
+  <section class="search-section container text-center mt-5" data-aos="zoom-in">
+    <h3>Busque por Cursos</h3>
+    <div class="d-flex justify-content-center mt-3">
+      <input type="text" class="form-control w-50 me-2" placeholder="Digite o nome do curso...">
+      <button class="btn btn-main">Pesquisar</button>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="courses container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2>Nossos Cursos Populares</h2>
+      <p>Aprenda com profissionais experientes e conquiste certificações reconhecidas.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="course-card p-3">
+          <img src="https://cdn.pixabay.com/photo/2015/01/21/14/14/apple-606761_1280.jpg" class="img-fluid" alt="">
+          <h5 class="mt-3">Java Full Stack Development</h5>
+          <p>Aprenda Java do zero ao avançado, incluindo back-end e banco de dados.</p>
+          <p class="price">$123.68</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="course-card p-3">
+          <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" class="img-fluid" alt="">
+          <h5 class="mt-3">Python Full Stack Development</h5>
+          <p>Domine Python e suas principais aplicações para desenvolvimento moderno.</p>
+          <p class="price">$123.68</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="course-card p-3">
+          <img src="https://cdn.pixabay.com/photo/2014/12/27/15/40/html5-581751_1280.jpg" class="img-fluid" alt="">
+          <h5 class="mt-3">HTML & CSS Full Stack</h5>
+          <p>Aprenda a construir sites modernos, responsivos e profissionais.</p>
+          <p class="price">$123.68</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center" data-aos="fade-up">
+    <h5>Junte-se à nossa comunidade!</h5>
+    <p>Estamos empolgados em tê-lo conosco nessa jornada de aprendizado.</p>
+    <a href="#" class="btn btn-main">Participe Agora</a>
+    <div class="mt-3">
+      <small>© 2025 NavSkills | Desenvolvido por Caroline Silva</small>
+    </div>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="btnTop" title="Voltar ao topo">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Mostrar / ocultar botão de topo
+    const btnTop = document.getElementById("btnTop");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btnTop.style.display = "flex";
+      } else {
+        btnTop.style.display = "none";
+      }
+    };
+
+    // Rolagem suave ao topo
+    btnTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
